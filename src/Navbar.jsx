@@ -2,8 +2,8 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className="fixed left-0 top-1/3 transform -translate-y-1/4 w-40 h-auto bg-gray-100 text-blue p-4">
-            <ul className="space-y-4">
+        <div className="fixed transform -translate-y-1/4 w-full h-auto bg-gray-100 text-blue p-4 top-2 left-0">
+            <ul className="flex justify-center space-x-4">
                 <li>
                     <a href="#about" className="hover:text-blue-300">About Me</a>
                 </li>
