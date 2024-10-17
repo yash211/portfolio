@@ -6,7 +6,7 @@ function Home() {
     return (
         <div className="">
             <Navbar />
-            <div className="min-h-screen bg-gradient-to-r from-teal-200 to-blue-500">
+            <div className="min-h-screen w-full bg-gradient-to-r from-teal-200 to-blue-500">
                 <About />
                 <Education/>
             </div>
