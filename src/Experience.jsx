@@ -1,71 +1,111 @@
-import React from 'react'
-
 const Experience = () => {
+    const jobs = [
+        {
+            date: "February 2022",
+            title: "Application UI Developer",
+            company: "Tailwind Labs",
+            type: "Full-time",
+            duration: "February 2022 - August 2022", // Added duration
+            tasks: [
+                "Developed over 20+ pages including dashboard layout, charts, and kanban board.",
+                "Collaborated with design teams to implement UI components in Tailwind CSS.",
+                "Maintained code quality and followed best practices.",
+            ],
+        },
+        {
+            date: "March 2022",
+            title: "UI/UX Designer",
+            company: "Figma Design Co.",
+            type: "Full-time",
+            duration: "March 2022 - December 2022", // Added duration
+            tasks: [
+                "Designed marketing pages in Figma with a focus on consistency.",
+                "Worked closely with developers to ensure parity between design and implementation.",
+                "Updated designs based on user feedback and analytics.",
+            ],
+        },
+        {
+            date: "April 2022",
+            title: "Frontend Developer",
+            company: "E-Commerce Inc.",
+            type: "Full-time",
+            duration: "April 2022 - January 2023", // Added duration
+            tasks: [
+                "Built interactive components for e-commerce platforms using Tailwind CSS.",
+                "Collaborated with backend developers to integrate APIs.",
+                "Ensured cross-browser compatibility and responsiveness.",
+            ],
+        },
+        {
+            date: "June 2023",
+            title: "Intern Frontend Developer",
+            company: "Tech Startup",
+            type: "Internship",
+            duration: "June 2023 - August 2023", // Added duration
+            tasks: [
+                "Assisted in the development of web applications.",
+                "Gained hands-on experience with frontend technologies.",
+                "Participated in team meetings and contributed to discussions.",
+            ],
+        },
+        {
+            date: "August 2023",
+            title: "Intern UI/UX Designer",
+            company: "Creative Agency",
+            type: "Internship",
+            duration: "August 2023 - October 2023", // Added duration
+            tasks: [
+                "Supported the design team in creating user interfaces.",
+                "Conducted user research and usability testing.",
+                "Helped prepare presentations for clients.",
+            ],
+        },
+    ];
+
     return (
-        <div className="relative w-full h-screen flex justify-between items-center p-16 bg-gray-100">
+        <section className="flex items-center justify-center mt-10 text-white">
+            <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start lg:space-x-12 space-y-12 lg:space-y-0">
+                <div className="lg:w-1/4 lg:my-40 w-full flex justify-center lg:justify-center items-center">
+                    <h2 className="text-3xl font-sans font-bold italic mb-3 lg:my-20 relative">
+                        <span className="relative z-10 px-4 text-black">WORK EXPERIENCE</span>
+                    </h2>
+                </div>
+                <div className="lg:w-3/4 w-full space-y-8">
+                    {jobs.map((job, index) => (
+                        <div key={index} className="flex gap-x-3 pb-8 w-full">
+                            <div className="lg:w-46 sm:w-20 text-end">
+                                <span className="text-xs text-gray-500">{job.duration}</span>
+                            </div>
 
-            {/* Left Section: Company Name */}
-            <div className="relative flex items-center">
 
-                <div className="pr-6">
-                    <h3 className="text-xl font-bold">Company Name</h3>
-                    <p className="text-md text-gray-400">Position Title</p>
+                            <div className="relative after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:bg-gray-200">
+                                <div className="relative z-10 size-7 flex justify-center items-center">
+                                    <div className="size-2 rounded-full bg-gray-400"></div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div className="grow pt-0.5 pb-8">
+                                <div className="flex justify-between items-center">
+                                    <h3 className="flex gap-x-1.5 font-semibold text-gray-800">
+                                        {job.title}
+                                    </h3>
+                                </div>
+                                <h4 className="text-sm text-gray-600">{job.company}</h4> {/* Separate company name */}
+                                <ul className="mt-1 text-sm text-gray-600 list-disc list-inside">
+                                    {job.tasks.map((task, taskIndex) => (
+                                        <li key={taskIndex}>{task}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-            <div className='w-3/4'>
-                <div
-                    class="absolute right-0 top-0 h-full w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400 lg:block"></div>
-            </div>
-            {/* Middle Section: Timeline */}
-            <div className="relative flex flex-col items-center">
-                {/* Central Vertical Line */}
-                <div className="absolute h-full w-px bg-gray-400"></div>
+        </section>
+    );
+};
 
-                {/* Timeline Slider */}
-                <div className="relative">
-                    {/* Horizontal Line for Slider */}
-                    <div className="absolute top-1/2 w-full h-px bg-gray-400"></div>
-
-                    {/* Slider Component */}
-                    <input
-                        type="range"
-                        min="1"
-                        max="12"
-                        value="6"
-                        className="relative z-10 appearance-none h-2 w-64 bg-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
-                    />
-                </div>
-
-                {/* Popup for Achievements */}
-                <div id="popup" className="absolute top-16 bg-white shadow-lg p-4 rounded-lg border border-gray-300">
-                    <h4 className="text-lg font-semibold">Quarter Title</h4>
-                    <ul className="text-gray-600">
-                        <li>Achievement 1</li>
-                        <li>Achievement 2</li>
-                        <li>Achievement 3</li>
-                    </ul>
-                </div>
-            </div>
-
-            {/* Right Section: Skills Used */}
-            <div className="relative flex items-center">
-                {/* Vertical Line */}
-                <div className="absolute right-0 top-0 bottom-0 w-px bg-gray-400"></div>
-
-                {/* Skills Display */}
-                <div className="pl-6">
-                    <div className="flex flex-col space-y-2">
-                        <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">ReactJS</span>
-                        <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                        <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">JQuery</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-    )
-}
-
-export default Experience
+export default Experience;
