@@ -1,27 +1,35 @@
 const Experience = () => {
     const jobs = [
         {
-            date: "February 2022",
-            title: "Application UI Developer",
-            company: "Tailwind Labs",
+            
+            title: "Software Development Engineer",
+            company: "Cloudesign Solution Pvt Ltd",
             type: "Full-time",
-            duration: "February 2022 - August 2022", // Added duration
+            duration: "July 2023 - Current",
             tasks: [
-                "Developed over 20+ pages including dashboard layout, charts, and kanban board.",
-                "Collaborated with design teams to implement UI components in Tailwind CSS.",
-                "Maintained code quality and followed best practices.",
+                "Developed reusable and efficient React components and forms, enhancing the user interface and improving overall user experience for the CloudTrack application.",
+                "Utilized TypeScript and NestJS to design and implement over 30 RESTful APIs, optimizing performance and scalability of backend services.",
+                "Managed AWS S3 bucket storage by implementing pre-signed URLs for secure access, ensuring efficient data handling and retrieval.",
+                "Led a cross-functional team in designing and executing a new module for a key customer, facilitating client meetings and sprint planning to gather requirements and feedback.",
+                "Designed backend architecture and configured AWS services for the secondary freight feature of the CloudTrack application, contributing to improved functionality.",
+                "Conducted 20+ technical interviews for Python, MongoDB, and ReactJS positions, contributing to the hiring process and building a strong development team.",
+                "Designed and implemented a backend system using Django and Python to optimize API response times, reducing latency from minutes to seconds, significantly enhancing application performance for Bamboo HR."
             ],
         },
         {
-            date: "March 2022",
+          
             title: "UI/UX Designer",
             company: "Figma Design Co.",
             type: "Full-time",
             duration: "March 2022 - December 2022", // Added duration
             tasks: [
-                "Designed marketing pages in Figma with a focus on consistency.",
-                "Worked closely with developers to ensure parity between design and implementation.",
-                "Updated designs based on user feedback and analytics.",
+                "Developed reusable and efficient React components and forms, enhancing the user interface and improving overall user experience for the CloudTrack application.",
+                "Utilized TypeScript and NestJS to design and implement over 30 RESTful APIs, optimizing performance and scalability of backend services.",
+                "Managed AWS S3 bucket storage by implementing pre-signed URLs for secure access, ensuring efficient data handling and retrieval.",
+                "Led a cross-functional team in designing and executing a new module for a key customer, facilitating client meetings and sprint planning to gather requirements and feedback.",
+                "Designed backend architecture and configured AWS services for the secondary freight feature of the CloudTrack application, contributing to improved functionality.",
+                "Conducted 20+ technical interviews for Python, MongoDB, and ReactJS positions, contributing to the hiring process and building a strong development team.",
+                "Designed and implemented a backend system using Django and Python to optimize API response times, reducing latency from minutes to seconds, significantly enhancing application performance for Bamboo HR."
             ],
         },
         {
@@ -65,16 +73,16 @@ const Experience = () => {
     return (
         <section className="flex items-center justify-center mt-10 text-white">
             <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start lg:space-x-12 space-y-12 lg:space-y-0">
-                <div className="lg:w-1/4 lg:my-40 w-full flex justify-center lg:justify-center items-center">
-                    <h2 className="text-3xl font-sans font-bold italic mb-3 lg:my-20 relative">
+                <div className="lg:w-1/4 lg:my-40 w-full h-full flex justify-center lg:justify-center items-center">
+                    <h2 className="text-3xl font-sans font-bold italic mb-3 lg:py-40 relative">
                         <span className="relative z-10 px-4 text-black">WORK EXPERIENCE</span>
                     </h2>
                 </div>
                 <div className="lg:w-3/4 w-full space-y-8">
                     {jobs.map((job, index) => (
-                        <div key={index} className="flex gap-x-3 pb-8 w-full">
-                            <div className="lg:w-46 sm:w-20 text-end">
-                                <span className="text-xs text-gray-500">{job.duration}</span>
+                        <div key={index} className="flex gap-x-1 pb-8 w-full">
+                            <div className="lg:w-24 md-24 sm-10 text-left">
+                                <span className="text-xs font-bold text-neutral-900">{job.duration}</span>
                             </div>
 
 
@@ -87,16 +95,16 @@ const Experience = () => {
 
 
 
-                            <div className="grow pt-0.5 pb-8">
+                            <div className="lg:w-3/4 md-w-1/2 sm:w-full pl-4">
                                 <div className="flex justify-between items-center">
-                                    <h3 className="flex gap-x-1.5 font-semibold text-gray-800">
+                                    <h3 className="flex gap-x-1.5 font-bold text-lg text-violet-800">
                                         {job.title}
                                     </h3>
                                 </div>
-                                <h4 className="text-sm text-gray-600">{job.company}</h4> {/* Separate company name */}
+                                <h4 className="text-lg text-rose-900">{job.company}</h4>
                                 <ul className="mt-1 text-sm text-gray-600 list-disc list-inside">
                                     {job.tasks.map((task, taskIndex) => (
-                                        <li key={taskIndex}>{task}</li>
+                                        <li className="text-md text-black" key={taskIndex}>{task}</li>
                                     ))}
                                 </ul>
                             </div>

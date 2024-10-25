@@ -7,7 +7,7 @@ function Home() {
     return (
         <div className="">
             <Navbar />
-            <div className="min-h-screen w-full bg-gradient-to-r from-teal-200 to-blue-500">
+            <div className="min-h-screen w-full bg-gradient-to-r from-indigo-200 from-10% via-green-200 via-30% to-blue-300 to-90%">
                 <About />
                 <Education/>
                 <Experience/>

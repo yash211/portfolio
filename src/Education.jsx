@@ -23,7 +23,7 @@ const Education = () => {
             <p className="text-md text-green-900 mb-4">London,Ontario,Canada</p>
             <p className="text-md font-bold text-red-900 mb-4 uppercase">Master's in Software Engineering</p>
             <hr className="w-full h-0.5 bg-gray-500 border-0 rounded dark:bg-gray-900"></hr>
-            <p className="text-lg text-orange-900 pt-4">Relevant Courses: <span className='text-gray-900'>Data Analytics,Web Technologies,Database Management & Appilication,Cloud Computing,Hacking,Machine Learning</span></p>
+            <p className="text-sm text-orange-900 pt-4">Relevant Courses: <span className='text-gray-900 text-sm'>Data Analytics,Web Technologies,Database Management & Appilication,Cloud Computing,Hacking,Machine Learning</span></p>
           </div>
 
           {/* Card 2 */}
@@ -36,7 +36,7 @@ const Education = () => {
             <p className="text-md font-bold text-red-900 uppercase">Bachelor's in Computer Engineering</p>
             <p className="text-sm text-gray-700 mb-4">GPA: 8.71/10</p>
             <hr className="w-full h-0.5 bg-gray-500 border-0 rounded dark:bg-gray-900"></hr>
-            <p className="text-lg text-orange-900 pt-4">Relevant Courses: <span className='text-gray-900'>Data Structure & Algorithms,Mobile Computing,Operating Systems,Computer Networks,Computer Graphics,Software Architecture,Introduction to Intelligent System,Deep Learning,Natural Language Processing</span></p>
+            <p className="text-sm text-orange-900 pt-4">Relevant Courses: <span className='text-gray-900 text-sm'>Data Structure & Algorithms,Mobile Computing,Operating Systems,Computer Networks,Computer Graphics,Software Architecture,Introduction to Intelligent System,Deep Learning,Natural Language Processing</span></p>
 
           </div>
         </div>
