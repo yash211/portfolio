@@ -1,9 +1,9 @@
 const Experience = () => {
     const jobs = [
         {
-            
-            title: "Software Development Engineer",
-            company: "Cloudesign Solution Pvt Ltd",
+
+            title: "Software Development Engineer-I",
+            company: "Cloudesign Solution PVT LTD",
             type: "Full-time",
             duration: "July 2023 - Current",
             tasks: [
@@ -17,57 +17,56 @@ const Experience = () => {
             ],
         },
         {
-          
-            title: "UI/UX Designer",
-            company: "Figma Design Co.",
+
+            title: "Software Development Engineer",
+            company: "Decimal Points Analytics PVT LTD",
             type: "Full-time",
-            duration: "March 2022 - December 2022", // Added duration
+            duration: "June 2022 - July 2023",
             tasks: [
-                "Developed reusable and efficient React components and forms, enhancing the user interface and improving overall user experience for the CloudTrack application.",
-                "Utilized TypeScript and NestJS to design and implement over 30 RESTful APIs, optimizing performance and scalability of backend services.",
-                "Managed AWS S3 bucket storage by implementing pre-signed URLs for secure access, ensuring efficient data handling and retrieval.",
-                "Led a cross-functional team in designing and executing a new module for a key customer, facilitating client meetings and sprint planning to gather requirements and feedback.",
-                "Designed backend architecture and configured AWS services for the secondary freight feature of the CloudTrack application, contributing to improved functionality.",
-                "Conducted 20+ technical interviews for Python, MongoDB, and ReactJS positions, contributing to the hiring process and building a strong development team.",
-                "Designed and implemented a backend system using Django and Python to optimize API response times, reducing latency from minutes to seconds, significantly enhancing application performance for Bamboo HR."
+                "Built a dynamic web application with Django, leveraging jQuery and HTML for an interactive UI.",
+                "Gained foundational knowledge in blockchain technology and the Hedera SDK, focusing on API integration.",
+                "Developed and optimized Python scripts to support backend workflows.",
+                "Integrated APIs with React.js to visualize complex data with interactive, responsive graphs with Recharts and charts.js.",
+                "Resolved critical defects in multiple modules, demonstrating a quick learning curve with unfamiliar codebases",
+                "Collaborated in agile sprints to deliver full stack features on schedule, balancing front-end and back-end tasks, addressing feedback, and iterating rapidly to meet evolving project needs."
             ],
         },
         {
-            date: "April 2022",
-            title: "Frontend Developer",
-            company: "E-Commerce Inc.",
-            type: "Full-time",
-            duration: "April 2022 - January 2023", // Added duration
-            tasks: [
-                "Built interactive components for e-commerce platforms using Tailwind CSS.",
-                "Collaborated with backend developers to integrate APIs.",
-                "Ensured cross-browser compatibility and responsiveness.",
-            ],
-        },
-        {
-            date: "June 2023",
-            title: "Intern Frontend Developer",
-            company: "Tech Startup",
+            title: "Data Science And Business Analytics Intern",
+            company: "The Sparks Foundation",
             type: "Internship",
-            duration: "June 2023 - August 2023", // Added duration
+            duration: "June 2021 - July 2021",
             tasks: [
-                "Assisted in the development of web applications.",
-                "Gained hands-on experience with frontend technologies.",
-                "Participated in team meetings and contributed to discussions.",
+                "Conducted comprehensive data analysis using Python libraries (e.g., Pandas, Matplotlib) to extract meaningful insights from the dataset.",
+                "Gained proficiency in supervised learning techniques, including regression methods, to analyze datasets and predict outcomes effectively.",
+                "Enhanced technical skills in Python programming, data manipulation, and visualization techniques, alongside tools like Jupyter Notebooks for interactive coding",
             ],
         },
         {
-            date: "August 2023",
-            title: "Intern UI/UX Designer",
-            company: "Creative Agency",
+            title: "Web Development Intern",
+            company: "E-Svadhyaya",
             type: "Internship",
-            duration: "August 2023 - October 2023", // Added duration
+            duration: "May 2021 - June 2021",
             tasks: [
-                "Supported the design team in creating user interfaces.",
-                "Conducted user research and usability testing.",
-                "Helped prepare presentations for clients.",
+                "Created a comprehensive school management system with core functionalities including student records, teacher profiles, and class management, utilizing a full-stack tech stack.",
+                "Configured and optimized a relational database schema for efficient data storage and retrieval, allowing seamless handling of school-related records.",
+                "Integrated secure user authentication and role-based authorization to manage access rights for students, teachers, and administrators.",
+                "Conducted testing and debugging to ensure reliability, scalability, and security of the application, preparing it for real-world deployment in a school environment.",
+                "Managed code versions using Git, enabling collaborative work with peers and showcasing the project on GitHub.",
+               
             ],
         },
+        {
+            title: "Flutter Developer",
+            company: "Cometa Intellect LLP",
+            type: "Internship",
+            duration: "June 2023 - August 2023",
+            tasks: [
+                "Wrote efficient and maintainable Dart code within the Flutter framework to develop features for a diagnostic billing application, enhancing functionality and user experience.",
+                "Conducted thorough testing of the application to identify and resolve bugs, ensuring a smooth user experience and high-quality performance."
+            ],
+        },
+        
     ];
 
     return (
@@ -102,7 +101,7 @@ const Experience = () => {
                                     </h3>
                                 </div>
                                 <h4 className="text-lg text-rose-900">{job.company}</h4>
-                                <ul className="mt-1 text-sm text-gray-600 list-disc list-inside">
+                                <ul className="mt-1 pt-2 text-sm text-gray-600 list-disc list-inside">
                                     {job.tasks.map((task, taskIndex) => (
                                         <li className="text-md text-black" key={taskIndex}>{task}</li>
                                     ))}
