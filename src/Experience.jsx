@@ -71,21 +71,21 @@ const Experience = () => {
 
     return (
         <section className="flex items-center justify-center mt-10 text-white">
-            <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start lg:space-x-12 space-y-12 lg:space-y-0">
-                <div className="lg:w-1/4 lg:my-40 w-full h-full flex justify-center lg:justify-center items-center">
-                    <h2 className="text-3xl font-sans font-bold italic mb-3 lg:py-40 relative">
+            <div className="container mx-auto px-4 flex flex-col lg:flex-col items-start lg:space-x-12 space-y-12 lg:space-y-0">
+                <div className="lg:w-full md-w-full sm-w-full h-full flex md:justify-center lg:justify-center sm-justify-center items-center">
+                    <h2 className="text-3xl font-sans font-bold italic mb-3 relative">
                         <span className="relative z-10 px-4 text-black">WORK EXPERIENCE</span>
                     </h2>
                 </div>
-                <div className="lg:w-3/4 w-full space-y-8">
+                <div className="lg:w-full space-y-8">
                     {jobs.map((job, index) => (
                         <div key={index} className="flex gap-x-1 pb-8 w-full">
-                            <div className="lg:w-24 md-24 sm-10 text-left">
+                            <div className="lg:w-1/7 md-w-full sm-w-full text-left py-">
                                 <span className="text-xs font-bold text-neutral-900">{job.duration}</span>
                             </div>
 
 
-                            <div className="relative after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:bg-gray-200">
+                            <div className="relative px after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:bg-gray-200">
                                 <div className="relative z-10 size-7 flex justify-center items-center">
                                     <div className="size-2 rounded-full bg-gray-400"></div>
                                 </div>
