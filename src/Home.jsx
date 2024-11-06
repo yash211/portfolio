@@ -2,6 +2,7 @@ import About from "./About"
 import Education from "./Education"
 import Experience from "./Experience"
 import Navbar from "./Navbar"
+import Skills from "./Skills"
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
                 <About />
                 <Education/>
                 <Experience/>
+                <Skills/>
             </div>
         </div>
     )

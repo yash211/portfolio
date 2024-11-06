@@ -53,7 +53,7 @@ const Experience = () => {
                 "Integrated secure user authentication and role-based authorization to manage access rights for students, teachers, and administrators.",
                 "Conducted testing and debugging to ensure reliability, scalability, and security of the application, preparing it for real-world deployment in a school environment.",
                 "Managed code versions using Git, enabling collaborative work with peers and showcasing the project on GitHub.",
-               
+
             ],
         },
         {
@@ -66,11 +66,11 @@ const Experience = () => {
                 "Conducted thorough testing of the application to identify and resolve bugs, ensuring a smooth user experience and high-quality performance."
             ],
         },
-        
+
     ];
 
     return (
-        <section className="flex items-center justify-center mt-10 text-white">
+        <section className="flex items-center justify-center mt-10 px-8 mx-8 text-white">
             <div className="container mx-auto px-4 flex flex-col lg:flex-col items-start lg:space-x-12 space-y-12 lg:space-y-0">
                 <div className="lg:w-full md-w-full sm-w-full h-full flex md:justify-center lg:justify-center sm-justify-center items-center">
                     <h2 className="text-3xl font-sans font-bold italic mb-3 relative">
@@ -79,22 +79,12 @@ const Experience = () => {
                 </div>
                 <div className="lg:w-full space-y-8">
                     {jobs.map((job, index) => (
-                        <div key={index} className="flex gap-x-1 pb-8 w-full">
-                            <div className="lg:w-1/7 md-w-full sm-w-full text-left py-">
-                                <span className="text-xs font-bold text-neutral-900">{job.duration}</span>
+                        <div key={index} className="flex gap-x-2 pb-8 w-full">
+                            <div className="lg:w-1/6 md-w-1/5 sm-w-1/2 text-left">
+                                {/* <span className="text-lg font-bold bg-red-100 text-black p-1 rounded">{job.duration}</span> */}
+                                <span className="text-lg font-bold text-blue-400 p-1 rounded">{job.duration}</span>
                             </div>
-
-
-                            <div className="relative px after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:bg-gray-200">
-                                <div className="relative z-10 size-7 flex justify-center items-center">
-                                    <div className="size-2 rounded-full bg-gray-400"></div>
-                                </div>
-                            </div>
-
-
-
-
-                            <div className="lg:w-3/4 md-w-1/2 sm:w-full pl-4">
+                            <div className="px-5 lg:w-full md-w-1/2 sm:w-full">
                                 <div className="flex justify-between items-center">
                                     <h3 className="flex gap-x-1.5 font-bold text-lg text-violet-800">
                                         {job.title}
@@ -103,11 +93,13 @@ const Experience = () => {
                                 <h4 className="text-lg text-rose-900">{job.company}</h4>
                                 <ul className="mt-1 pt-2 text-sm text-gray-600 list-disc list-inside">
                                     {job.tasks.map((task, taskIndex) => (
-                                        <li className="text-md text-black" key={taskIndex}>{task}</li>
+                                        <li className="text-lg text-black font-semibold" key={taskIndex}>{task}</li>
                                     ))}
                                 </ul>
                             </div>
+                        
                         </div>
+
                     ))}
                 </div>
             </div>
