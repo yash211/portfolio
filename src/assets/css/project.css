@@ -1,0 +1,113 @@
+/* Project Card Styling */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image Styling */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 150px; /* Adjusted for smaller height */
+    object-fit: cover; /* Ensures proper scaling */
+  }
+  
+  /* Card Content */
+  .project-card-content {
+    padding: 15px 20px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 10px 0 10px; /* Added padding between the image and title */
+    background: linear-gradient(90deg, #00796b, #00bfa5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .project-card p {
+    font-size: 0.95rem;
+    color: #555555;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 7px;
+  }
+  
+  .skill-badge {
+    background: linear-gradient(90deg, #ff8a80, #ff5252);
+    color: white;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .skill-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* GitHub Icon */
+  .github-icon {
+    font-size: 1rem;
+    color: #444444;
+    text-align: right;
+    margin-top: 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .github-icon:hover {
+    tw-text-opacity: 1;
+    color: rgb(15 15 15);
+  }
+
+  /* .hover:text-white:hover {
+    tw-text-opacity: 1;
+    color: rgb(15 15 15);
+} */
+  
+  /* Button Styling */
+  .see-more-btn {
+    display: block;
+    margin: 20px auto 0;
+    background: linear-gradient(90deg,rgb(60, 191, 231),rgb(50, 32, 217));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .see-more-btn:hover {
+    background: linear-gradient(90deg,rgb(50, 43, 192),rgb(69, 86, 214));
+    transform: scale(1.05);
+  }
+  

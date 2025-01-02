@@ -1,7 +1,9 @@
 import About from "./About"
+import Achievements from "./Achievements"
 import Education from "./Education"
 import Experience from "./Experience"
 import Navbar from "./Navbar"
+import Project from "./Project"
 import Skills from "./Skills"
 
 function Home() {
@@ -13,6 +15,8 @@ function Home() {
                 <Education/>
                 <Experience/>
                 <Skills/>
+                <Project/>
+                <Achievements/>
             </div>
         </div>
     )

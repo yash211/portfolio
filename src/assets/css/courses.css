@@ -1,0 +1,31 @@
+.custom-btn-container {
+    display: flex;
+    justify-content: center;  /* Center the button horizontally */
+    align-items: center;      /* Vertically align the button */
+}
+
+.custom-btn {
+    display: inline-block;
+    padding: 6px 12px; /* Reduced padding */
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.875rem; /* Smaller font size */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: auto;
+    margin: 0 auto;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn.w-full {
+    width: 100%;
+}
