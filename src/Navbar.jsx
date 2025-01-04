@@ -1,30 +1,67 @@
-import React from 'react'
+import React from 'react';
 
-const Navbar = () => {
-    return (
-        <div className="sticky transform -translate-y-1/4 w-full h-auto bg-black text-blue-300 p-4 top-2 left-0">
-            <ul className="flex justify-center space-x-4">
-                <li>
-                    <a href="#about" className="hover:text-gray-300">About Me</a>
-                </li>
-                <li>
-                    <a href="#work" className="hover:text-gray-300">Work Experience</a>
-                </li>
-                <li>
-                    <a href="#Education" className="hover:text-gray-300">Education</a>
-                </li>
-                <li>
-                    <a href="#projects" className="hover:text-gray-300">Projects</a>
-                </li>
-                <li>
-                    <a href="#achievements" className="hover:text-gray-300">Achievements</a>
-                </li>
-                <li>
-                    <a href="#skills" className="hover:text-gray-300">Skills</a>
-                </li>
-            </ul>
-        </div>
-    )
-}
+const Navbar = ({
+  scrollToAbout,
+  scrollToEducation,
+  scrollToExperience,
+  scrollToSkills,
+  scrollToProjects,
+  scrollToAchievements,
+}) => {
+  return (
+    <div className="sticky top-0 w-full h-auto bg-black text-blue-300 p-4 z-50">
+      <ul className="flex justify-center space-x-4">
+        <li>
+          <button
+            onClick={scrollToAbout}
+            className="hover:text-gray-300 cursor-pointer"
+          >
+            About Me
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={scrollToEducation}
+            className="hover:text-gray-300 cursor-pointer"
+          >
+            Education
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={scrollToExperience}
+            className="hover:text-gray-300 cursor-pointer"
+          >
+            Experience
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={scrollToSkills}
+            className="hover:text-gray-300 cursor-pointer"
+          >
+            Skills
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={scrollToProjects}
+            className="hover:text-gray-300 cursor-pointer"
+          >
+            Projects
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={scrollToAchievements}
+            className="hover:text-gray-300 cursor-pointer"
+          >
+            Achievements
+          </button>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

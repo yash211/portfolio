@@ -1,23 +1,23 @@
 .custom-btn-container {
     display: flex;
-    justify-content: center;  /* Center the button horizontally */
-    align-items: center;      /* Vertically align the button */
+    justify-content: center;  /* Center button content */
+    align-items: center;      /* Vertically align */
+    width: 100%;              /* Ensure container spans full width */
 }
 
 .custom-btn {
-    display: inline-block;
-    padding: 6px 12px; /* Reduced padding */
+    display: block;           /* Makes the button a block-level element */
+    padding: 8px 16px;        /* Adjust padding for better appearance */
+    width: 100%;              /* Full width */
     background: linear-gradient(90deg, #667eea, #764ba2);
     color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 0.875rem; /* Smaller font size */
+    font-size: 0.875rem;      /* Smaller font size */
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: auto;
-    margin: 0 auto;
 }
 
 .custom-btn:hover {
@@ -26,6 +26,55 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.custom-btn.w-full {
-    width: 100%;
+/* @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
+.bounce-icon {
+  animation: bounce 2s infinite;
+} */
+
+/* @keyframes rotateAndFight {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-rotateAndFight {
+  animation: rotateAndFight 5s infinite;
+} */
+
+
+/* .custom-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn:hover {
+  background: linear-gradient(90deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+} */

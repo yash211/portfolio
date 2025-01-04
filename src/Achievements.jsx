@@ -16,56 +16,50 @@ const data = [
     {
         title: "Machine Learning Hackathon",
         description: "Ranked 39th among 4,678 participants in ML hackathon organized by American Express.",
-        githubLink: "https://github.com/",
+        githubLink: "https://github.com/yash211/Credit_Card_Default_Classification",
         leaderboardLink:
             "https://www.hackerearth.com/challenges/competitive/amexpert-code-lab/leaderboard/credit-card-default-risk-5-95cbc85f/",
         icons: [faTrophy],
     },
     {
-        title: "LeetCode Profile",
-        description: "Solving competitive coding challenges on LeetCode.",
-        link: "https://leetcode.com/u/yash_211/",
-        icon: faCode,
-    },
-    {
         title: "Introduction to Scripting in Python",
         description: "An introductory course on scripting and automation with Python.",
-        link: "src/assets/scripting_in_python.jpg",
+        link: "src/assets/images/scripting_in_python.jpg",
         icon: faCertificate,
         skills: ["Python", "Automation"],
     },
     {
         title: "Introduction to Artificial Intelligence",
         description: "A foundational course in AI principles and methodologies.",
-        link: "src/assets/intro_ai.jpg",
+        link: "src/assets/images/intro_ai.jpg",
         icon: faCertificate,
-        skills: ["Artificial Intelligence","Decision Making"],
+        skills: ["AI", "Decision Making"],
     },
     {
         title: "Neural Networks and Deep Learning",
         description: "In-depth course on building and optimizing neural networks.",
-        link: "src/assets/dl.jpg",
+        link: "src/assets/images/dl.jpg",
         icon: faCertificate,
         skills: ["Neural Networks", "Deep Learning"],
     },
     {
         title: "Methods for Solving Problems",
         description: "Problem-solving strategies using computational and analytical methods.",
-        link: "src/assets/solving_problems.jpg",
+        link: "src/assets/images/solving_problems.jpg",
         icon: faCertificate,
-        skills: ["Problem-Solving","Algorithm Design"],
+        skills: ["Problem-Solving", "Algorithm Design"],
     },
     {
         title: "Essential Mathematics for Machine Learning (NPTEL)",
         description: "A course focusing on the mathematical foundations required for machine learning.",
-        link: "src/assets/essential_maths_ml.jpg", 
+        link: "src/assets/images/essential_maths_ml.jpg",
         icon: faCertificate,
         skills: ["Linear Algebra", "Calculus"],
     },
     {
         title: "Introduction to Machine Learning (NPTEL)",
         description: "An introductory course covering machine learning concepts and algorithms.",
-        link: "src/assets/nptel_introduction_ml.jpg", 
+        link: "src/assets/images/nptel_introduction_ml.jpg",
         icon: faCertificate,
         skills: ["Regression", "Classification"],
     },
@@ -126,7 +120,7 @@ const Achievements = () => {
                             <div className="p-4 flex-grow">
                                 <h3 className="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>
                                 <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-                                <div className="grid grid-cols-2 gap-2">
+                                {/* <div className="grid grid-cols-2 gap-2">
                                     {item.paperLink && (
                                         <a
                                             href={item.paperLink}
@@ -170,12 +164,72 @@ const Achievements = () => {
                                     {item.link && item.icon === faCertificate && (
                                         <button
                                             onClick={() => openModal(item.link)}
-                                            className="custom-btn custom-btn-container"
+                                            className="custom-btn-container"
+                                        >
+                                            View Certificate
+                                        </button>
+                                    )}
+                                </div> */}
+                                {item.skills && (
+                                    <div className="mb-4 skills-container">
+                                        {item.skills.map((skill, i) => (
+                                            <span key={i} className="skill-badge">
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                                <div className="grid grid-cols-1 gap-2"> {/* Ensures buttons stack in a single column */}
+                                    {item.paperLink && (
+                                        <a
+                                            href={item.paperLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="custom-btn w-full"
+                                        >
+                                            Paper
+                                        </a>
+                                    )}
+                                    {item.bookLink && (
+                                        <a
+                                            href={item.bookLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="custom-btn w-full"
+                                        >
+                                            Chapter
+                                        </a>
+                                    )}
+                                    {item.githubLink && (
+                                        <a
+                                            href={item.githubLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="custom-btn w-full"
+                                        >
+                                            GitHub
+                                        </a>
+                                    )}
+                                    {item.leaderboardLink && (
+                                        <a
+                                            href={item.leaderboardLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="custom-btn w-full"
+                                        >
+                                            Leaderboard
+                                        </a>
+                                    )}
+                                    {item.link && item.icon === faCertificate && (
+                                        <button
+                                            onClick={() => openModal(item.link)}
+                                            className="custom-btn w-full"
                                         >
                                             View Certificate
                                         </button>
                                     )}
                                 </div>
+
                             </div>
                         </div>
                     </div>
