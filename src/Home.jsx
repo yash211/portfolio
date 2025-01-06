@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Navbar from "./Navbar";
 import Project from "./Project";
 import Skills from "./Skills";
+import ContactMe from "./ContactMe";
 
 function Home() {
   // Create refs for each section
@@ -15,7 +16,7 @@ function Home() {
   const skillsRef = useRef(null);
   const projectRef = useRef(null);
   const achievementsRef = useRef(null);
-
+  const conactmeRef = useRef(null);
   // Scroll function
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({
@@ -34,12 +35,13 @@ function Home() {
         scrollToSkills={() => scrollToSection(skillsRef)}
         scrollToProjects={() => scrollToSection(projectRef)}
         scrollToAchievements={() => scrollToSection(achievementsRef)}
+        scrollToContactMe={() => scrollToSection(conactmeRef)}
       />
 
      
       <div className="min-h-screen w-full bg-gradient-to-r from-indigo-200 via-green-200 to-blue-300">
         <div ref={aboutRef}>
-          <About />
+        <About scrollToContactMe={() => scrollToSection(conactmeRef)} />
         </div>
 
         <div ref={educationRef}>
@@ -60,6 +62,10 @@ function Home() {
 
         <div ref={achievementsRef}>
           <Achievements />
+        </div>
+
+        <div ref={conactmeRef}>
+          <ContactMe/>
         </div>
       </div>
     </div>

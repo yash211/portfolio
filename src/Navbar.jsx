@@ -7,6 +7,7 @@ const Navbar = ({
   scrollToSkills,
   scrollToProjects,
   scrollToAchievements,
+  scrollToContactMe
 }) => {
   return (
     <div className="sticky top-0 w-full h-auto bg-black text-blue-300 p-4 z-50">
@@ -57,6 +58,14 @@ const Navbar = ({
             className="hover:text-gray-300 cursor-pointer"
           >
             Achievements
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={scrollToContactMe}
+            className="hover:text-gray-300 cursor-pointer"
+          >
+            Contact Me
           </button>
         </li>
       </ul>

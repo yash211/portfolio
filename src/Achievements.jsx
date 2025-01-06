@@ -120,56 +120,7 @@ const Achievements = () => {
                             <div className="p-4 flex-grow">
                                 <h3 className="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>
                                 <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-                                {/* <div className="grid grid-cols-2 gap-2">
-                                    {item.paperLink && (
-                                        <a
-                                            href={item.paperLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="custom-btn"
-                                        >
-                                            Paper
-                                        </a>
-                                    )}
-                                    {item.bookLink && (
-                                        <a
-                                            href={item.bookLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="custom-btn"
-                                        >
-                                            Chapter
-                                        </a>
-                                    )}
-                                    {item.githubLink && (
-                                        <a
-                                            href={item.githubLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="custom-btn"
-                                        >
-                                            GitHub
-                                        </a>
-                                    )}
-                                    {item.leaderboardLink && (
-                                        <a
-                                            href={item.leaderboardLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="custom-btn"
-                                        >
-                                            Leaderboard
-                                        </a>
-                                    )}
-                                    {item.link && item.icon === faCertificate && (
-                                        <button
-                                            onClick={() => openModal(item.link)}
-                                            className="custom-btn-container"
-                                        >
-                                            View Certificate
-                                        </button>
-                                    )}
-                                </div> */}
+                                
                                 {item.skills && (
                                     <div className="mb-4 skills-container">
                                         {item.skills.map((skill, i) => (

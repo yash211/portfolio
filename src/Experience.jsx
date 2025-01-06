@@ -1,11 +1,37 @@
+import React, { useState } from "react";
 const Experience = () => {
+    const [showAward, setShowAward] = useState({ visible: false, award: null });
+
+    const closeModal = () => {
+        setShowAward({ visible: false, award: null })
+    };
+
     const jobs = [
         {
 
             title: "Software Development Engineer-I",
             company: "Cloudesign Solution PVT LTD",
+            type: "Contract-Part Time",
+            duration: "August 2024 - Current",
+            tasks: [
+                "Developed robust backend APIs for the invoicing and billing module of a logistics application, ensuring high performance and scalability.",
+                "Mentored new team members to enhance their expertise in NestJS and ReactJS",
+                "Designed and implemented user-role-based functionalities, including middleware filters and access restrictions, to streamline operations such as trip and indent creation, ensuring secure and role-appropriate data visibility"
+            ],
+        },
+        {
+            title: "Software Development Engineer-I",
+            company: "Cloudesign Solution PVT LTD",
             type: "Full-time",
-            duration: "July 2023 - Current",
+            duration: "July 2023 - August 2024",
+            awards: [{
+                "name": "Rising Star Award",
+                "url": "src/assets/images/rs.jpg"
+            },
+            {
+                "name": "Employee Of The Month Award",
+                "url": "src/assets/images/emp.jpg"
+            }],
             tasks: [
                 "Developed reusable and efficient React components and forms, enhancing the user interface and improving overall user experience for the CloudTrack application.",
                 "Utilized TypeScript and NestJS to design and implement over 30 RESTful APIs, optimizing performance and scalability of backend services.",
@@ -69,40 +95,96 @@ const Experience = () => {
 
     ];
 
+   
+    const keywords = [
+        "NestJS",
+        "ReactJS",
+        "AWS S3",
+        "TypeScript",
+        "RESTful APIs",
+        "Django",
+        "Python",
+        "React components",
+    ];
+
+    const highlightKeywords = (text) => {
+        const regex = new RegExp(`(${keywords.join("|")})`, "gi");
+        return text.split(regex).map((part, index) =>
+            regex.test(part) ? (
+                <span key={index} className="text-blue-500 font-semibold">
+                    {part}
+                </span>
+            ) : (
+                part
+            )
+        );
+    };
+
     return (
-        <section className="flex items-center justify-center mt-10 px-8 mx-8 text-white">
-            <div className="container mx-auto px-4 flex flex-col lg:flex-col items-start lg:space-x-12 space-y-12 lg:space-y-0">
-                <div className="lg:w-full md-w-full sm-w-full h-full flex md:justify-center lg:justify-center sm-justify-center items-center">
-                    <h2 className="text-3xl font-sans font-bold italic mb-3 relative">
-                        <span className="relative z-10 px-4 text-black">WORK EXPERIENCE</span>
-                    </h2>
-                </div>
-                <div className="lg:w-full space-y-8">
+        <section className="py-10 pl-9 mx-3 text-white">
+            <h2 className="text-3xl font-sans font-bold italic mb-6 text-center text-black">
+                Work Experience
+            </h2>
+            <div className="container mx-auto px-4 flex flex-col space-y-12">
+                <div className="space-y-8">
                     {jobs.map((job, index) => (
-                        <div key={index} className="flex gap-x-2 pb-8 w-full">
-                            <div className="lg:w-1/6 md-w-1/5 sm-w-1/2 text-left">
-                                {/* <span className="text-lg font-bold bg-red-100 text-black p-1 rounded">{job.duration}</span> */}
-                                <span className="text-lg font-bold text-blue-400 p-1 rounded">{job.duration}</span>
+                        <div key={index} className="flex flex-col lg:flex-row gap-x-6 pb-8">
+                            <div className="lg:w-1/6 text-center">
+                                <span className="block text-lg font-bold text-blue-400 p-1 rounded">
+                                    {job.duration}
+                                </span>
+                                <span className="block text-sm font-medium text-blue-900">
+                                    {job.type}
+                                </span>
+                                {job.awards &&
+                                    job.awards.map((award, awardIndex) => (
+                                        <button
+                                            key={awardIndex}
+                                            onClick={() =>
+                                                setShowAward({ visible: true, award })
+                                            }
+                                            className="mt-2 custom-btn"
+                                        >
+                                            View {award.name}
+                                        </button>
+                                    ))}
                             </div>
-                            <div className="px-5 lg:w-full md-w-1/2 sm:w-full">
-                                <div className="flex justify-between items-center">
-                                    <h3 className="flex gap-x-1.5 font-bold text-lg text-violet-800">
-                                        {job.title}
-                                    </h3>
-                                </div>
+                            <div className="lg:w-5/6">
+                                <h3 className="font-bold text-lg text-violet-800">{job.title}</h3>
                                 <h4 className="text-lg text-rose-900">{job.company}</h4>
-                                <ul className="mt-1 pt-2 text-sm text-gray-600 list-disc list-inside">
+                                <ul className="mt-2 pt-2 text-sm text-gray-700 list-disc list-inside">
                                     {job.tasks.map((task, taskIndex) => (
-                                        <li className="text-lg text-black font-semibold" key={taskIndex}>{task}</li>
+                                        <li key={taskIndex} className="text-lg">
+                                            {highlightKeywords(task)}
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
-                        
                         </div>
-
                     ))}
                 </div>
             </div>
+
+            {showAward.visible && (
+               
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div className="bg-white rounded-lg overflow-hidden shadow-lg max-w-3xl">
+                        <div className="flex justify-end p-2">
+                            <button
+                                onClick={closeModal}
+                                className="text-gray-500 hover:text-gray-800 focus:outline-none"
+                            >
+                                ✖
+                            </button>
+                        </div>
+                        <img
+                            src={showAward.award.url}
+                            alt={showAward.award.name}
+                            className="w-full h-auto object-contain"
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

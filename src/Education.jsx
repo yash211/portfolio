@@ -6,8 +6,8 @@ const Education = () => {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start lg:space-x-12 space-y-12 lg:space-y-0">
         {/* Title Section */}
         <div className="lg:w-1/4 lg:my-40 w-full flex justify-center lg:justify-center items-center">
-          <h2 className="text-3xl font-sans hover:font-serif font-bold italic mb-3 lg:my-20 relative">
-            <span className="relative z-10 px-4 text-black">EDUCATION</span>
+          <h2 className="text-3xl font-sans font-bold italic mb-3 lg:my-20 relative">
+            <span className="relative z-10 px-4 text-black">Education</span>
           </h2>
         </div>
 
