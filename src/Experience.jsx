@@ -52,7 +52,7 @@ const Experience = () => {
                 "Built a dynamic web application with Django, leveraging jQuery and HTML for an interactive UI.",
                 "Gained foundational knowledge in blockchain technology and the Hedera SDK, focusing on API integration.",
                 "Developed and optimized Python scripts to support backend workflows.",
-                "Integrated APIs with React.js to visualize complex data with interactive, responsive graphs with Recharts and charts.js.",
+                "Integrated APIs with ReactJS to visualize complex data with interactive, responsive graphs with Recharts and charts.js.",
                 "Resolved critical defects in multiple modules, demonstrating a quick learning curve with unfamiliar codebases",
                 "Collaborated in agile sprints to deliver full stack features on schedule, balancing front-end and back-end tasks, addressing feedback, and iterating rapidly to meet evolving project needs."
             ],
@@ -74,7 +74,7 @@ const Experience = () => {
             type: "Internship",
             duration: "May 2021 - June 2021",
             tasks: [
-                "Created a comprehensive school management system with core functionalities including student records, teacher profiles, and class management, utilizing a full-stack tech stack.",
+                "Created a comprehensive school management system through codeigniter(core PHP framework) with core functionalities including student records, teacher profiles, and class management, utilizing a full-stack tech stack.",
                 "Configured and optimized a relational database schema for efficient data storage and retrieval, allowing seamless handling of school-related records.",
                 "Integrated secure user authentication and role-based authorization to manage access rights for students, teachers, and administrators.",
                 "Conducted testing and debugging to ensure reliability, scalability, and security of the application, preparing it for real-world deployment in a school environment.",
@@ -105,6 +105,20 @@ const Experience = () => {
         "Django",
         "Python",
         "React components",
+        "AWS",
+        "MongoDB",
+        "jQuery",
+        "Hedera SDK",
+        "blockchain",
+        "HTML",
+        "Recharts",
+        "chart.js",
+        "codeigniter",
+        "PHP",
+        "Git",
+        "GitHub",
+        "Dart",
+        "Flutter"
     ];
 
     const highlightKeywords = (text) => {

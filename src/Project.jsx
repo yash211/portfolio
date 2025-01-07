@@ -16,28 +16,28 @@ const projects = [
     description: 'A MERN stack application for ranking songs posted by artists for concert use.',
     technologies: ['MongoDB', 'Express', 'React', 'Node.js'],
     link: 'https://github.com/yash211/eventSongRanker-fe',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'User Authentication System',
     description: 'A secure user authentication system with JWT-based token management.',
     technologies: ['TypeScript', 'Express', 'MongoDB'],
     link: 'https://github.com/yash211/user-auth-management',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'Credit Card Default Classification',
     description: 'Machine learning model to predict credit card payment defaults.',
     technologies: ['Python', 'Scikit-learn', 'Pandas'],
     link: 'https://github.com/yash211/Credit_Card_Default_Classification',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'Celebrity Management',
     description: 'A ReactJS-based web app with Material-UI for managing celebrity details.',
     technologies: ['ReactJS', 'Material-UI', 'JavaScript'],
     link: 'https://github.com/yash211/Celebrity-Management',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   
   {
@@ -45,42 +45,42 @@ const projects = [
     description: 'A project predicting student scores based on study hours using machine learning.',
     technologies: ['Python', 'Scikit-learn', 'Pandas'],
     link: 'https://github.com/yash211/The-Sparks-Foundation-Internship',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'Payment Gateway',
     description: 'A payment gateway application built using Django for secure transactions.',
     technologies: ['Python', 'Django'],
     link: 'https://github.com/yash211/PaymentGateway',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'Django CRUD Datatables',
     description: 'A project implementing data tables with pagination and CRUD operations using Django.',
     technologies: ['Python', 'Django', 'SQLite3'],
     link: 'https://github.com/yash211/Django-CRUD-Datatables',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'Dandelions Image Classifier',
     description: 'A CNN-based image classifier to detect dandelions in images.',
     technologies: ['Python', 'Keras', 'TensorFlow', 'Matplotlib'],
     link: 'https://github.com/yash211/Dandelions_Image_Classifier',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'Indian Cuisine Web App',
     description: 'A web application showcasing special food items from different Indian states.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://github.com/yash211/Indian_Cuisine',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   },
   {
     title: 'SMS Spam Detection',
     description: 'A spam detection system using Naive Bayes classifier to classify SMS messages.',
     technologies: ['Python', 'NLTK', 'Scikit-learn', 'Pandas'],
     link: 'https://github.com/yash211/SMS-spam-detection',
-  image:'src/assets/images/ai_chatbot.png'
+  image:'src/assets/images/coming_soon.jpg'
   }
   ,
   {
@@ -88,7 +88,7 @@ const projects = [
     description: 'A school management application using PHP and the CodeIgniter framework.',
     technologies: ['PHP', 'CodeIgniter', 'MySQL'],
     link: 'https://github.com/yash211/school_management',
-  image:'src/asset/images/ai_chatbot.png'
+  image:'src/asset/images/coming_soon.jpg'
   },
 
 ];

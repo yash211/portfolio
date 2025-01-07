@@ -17,7 +17,7 @@ import {
 // Map FontAwesome icons
 const faIcons = {
   'Microservices Architecture': faProjectDiagram,
-  'React Unit Testing': faVial,
+  'Unit Testing': faVial,
   'Singleton Design Patterns': faLayerGroup,
   'Postman': faToolbox,
   'Swagger': faCogs,
@@ -46,7 +46,7 @@ const faIcons = {
 const skillCategories = [
   {
     category: 'IT Constructs',
-    skills: ['Microservices Architecture', 'Redux', 'React Unit Testing', 'Singleton Design Patterns', 'APIs', 'Artificial Intelligence', 'Machine Learning', 'Deep Learning', 'Natural Language Processing'],
+    skills: ['Microservices Architecture', 'Redux', 'Unit Testing', 'Artificial Intelligence', 'Machine Learning', 'Deep Learning', 'Natural Language Processing'],
   },
   {
     category: 'Programming Languages',
