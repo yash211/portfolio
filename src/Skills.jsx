@@ -139,7 +139,7 @@ const Skills = () => (
                           />
                         ) : (
                           <img
-                            src={`src/assets/images/${externalIcons[skill]}`}
+                            src={`/images/${externalIcons[skill]}`}
                             alt={skill}
                             className="w-4 h-4"
                           />

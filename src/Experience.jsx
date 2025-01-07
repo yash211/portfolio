@@ -26,11 +26,11 @@ const Experience = () => {
             duration: "July 2023 - August 2024",
             awards: [{
                 "name": "Rising Star Award",
-                "url": "src/assets/images/rs.jpg"
+                "url": "/images/rs.jpg"
             },
             {
                 "name": "Employee Of The Month Award",
-                "url": "src/assets/images/emp.jpg"
+                "url": "/images/emp.jpg"
             }],
             tasks: [
                 "Developed reusable and efficient React components and forms, enhancing the user interface and improving overall user experience for the CloudTrack application.",

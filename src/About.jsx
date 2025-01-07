@@ -52,13 +52,13 @@ const About = ({ scrollToContactMe }) => {
         { icon: faJsSquare, label: "JavaScript", delay: "4s" },
         { icon: faEnvelope, label: "Email", email: email, delay: "1s" },
         { icon: faLinkedin, url: "https://www.linkedin.com/in/yash211/", label: "LinkedIn", delay: "6s" },
-        { icon: "src/assets/images/leetcode.png", url: "https://leetcode.com/u/yash_211/", label: "Leetcode", delay: "5s" },
+        { icon: "/images/leetcode.png", url: "https://leetcode.com/u/yash_211/", label: "Leetcode", delay: "5s" },
     ];
 
     const Icons = [
         { icon: faGithub, url: "https://github.com/yash211", label: "GitHub", delay: "0s" },
         { icon: faLinkedin, url: "https://www.linkedin.com/in/yash211/", label: "LinkedIn", delay: "1s" },
-        { icon: "src/assets/images/leetcode.png", url: "https://leetcode.com/u/yash_211/", label: "Leetcode", delay: "5s" },
+        { icon: "/images/leetcode.png", url: "https://leetcode.com/u/yash_211/", label: "Leetcode", delay: "5s" },
         {
             icon: faEnvelope,
             label: "Email",
@@ -161,7 +161,7 @@ const About = ({ scrollToContactMe }) => {
                     <div className="w-full md:w-1/3 flex justify-center mb-8 md:mb-0">
                         <div className="relative">
                             <img
-                                src="src/assets/images/profile_pic.jpg"
+                                src="/images/profile_pic.jpg"
                                 alt="Yash Gupta"
                                 className="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover shadow-lg border-4 border-white"
                             />
@@ -197,7 +197,7 @@ const About = ({ scrollToContactMe }) => {
                         </ul>
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="src/assets/Yash_Gupta_Resume.pdf"
+                                href="/Yash_Gupta_Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300"
@@ -251,7 +251,7 @@ const About = ({ scrollToContactMe }) => {
                                                 >
                                                     {social.label === "Leetcode" ? (
                                                         <img
-                                                            src="src/assets/images/leetcode.png"
+                                                            src="/images/leetcode.png"
                                                             alt="LeetCode"
                                                             className="text-blue-600 text-lg hover:text-blue-700 transition-colors"
                                                             style={{ width: '24px', height: '24px' }}
@@ -301,7 +301,7 @@ const About = ({ scrollToContactMe }) => {
                                     >
                                         {social.label === "Leetcode" ? (
                                             <img
-                                                src="src/assets/images/leetcode.png"
+                                                src="/images/leetcode.png"
                                                 alt="LeetCode"
                                                 className="text-blue-600 text-lg hover:text-blue-700 transition-colors"
                                                 style={{ width: '24px', height: '24px' }}
