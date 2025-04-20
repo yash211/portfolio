@@ -1,95 +1,135 @@
-/* Project Card Styling */
 .project-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Image Styling */
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 150px; /* Adjusted for smaller height */
-    object-fit: cover; /* Ensures proper scaling */
-  }
-  
-  /* Card Content */
-  .project-card-content {
-    padding: 15px 20px;
-  }
-  
-  .project-card h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 10px 0 10px; /* Added padding between the image and title */
-    background: linear-gradient(90deg, #00796b, #00bfa5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .project-card p {
-    font-size: 0.95rem;
-    color: #555555;
-    padding-top: 15px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
-  
-  /* Skills Section */
-  .skills-container {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-    margin-bottom: 7px;
-  }
-  
-  .skill-badge {
-    background: linear-gradient(90deg, #ff8a80, #ff5252);
-    color: white;
-    font-size: 0.73rem;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-weight: 500;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .skill-badge:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* GitHub Icon */
-  .github-icon {
-    font-size: 1rem;
-    color: #444444;
-    text-align: right;
-    margin-top: 15px;
-    transition: color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .github-icon:hover {
-    tw-text-opacity: 1;
-    color: rgb(15 15 15);
-  }
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  /* .hover:text-white:hover {
-    tw-text-opacity: 1;
-    color: rgb(15 15 15);
-} */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Image Container */
+.image-container {
+  width: 100%;
+  height: 12rem; /* Fixed height (e.g., 48px x 4 for h-48) */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  object-fit: contain; /* Ensure the entire image is visible */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+/* Card Content */
+.project-card-content {
+  padding: 15px 20px;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px 0 10px; /* Added padding between the image and title */
+  background: linear-gradient(90deg, #00796b, #00bfa5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555555;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.skill-badge {
+  background: linear-gradient(90deg, #ff8a80, #ff5252);
+  color: white;
+  font-size: 0.73rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* GitHub Icon */
+.github-icon {
+  font-size: 1rem;
+  color: #444444;
+  text-align: right;
+  margin-top: 2px;
+  padding:2px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.github-icon:hover {
+  tw-text-opacity: 1;
+  color: rgb(15 15 15);
+}
+
+@media (max-width: 1224px) {
+  .github-icon {
+    display: none;
+  }
+  
+  .github-button {
+    margin-top : 5px;
+    display: block;           /* Makes the button a block-level element */
+    padding: 8px 16px;        /* Adjust padding for better appearance */
+    width: 50%;              /* Full width */
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.875rem;      /* Smaller font size */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items:center
+  }
+  
+  .github-button:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (min-width: 1025px) {
+  .github-button {
+    display: none;
+  }
+}
+
+/* .hover:text-white:hover {
+  tw-text-opacity: 1;
+  color: rgb(15 15 15);
+}
   
   /* Button Styling */
   .see-more-btn {

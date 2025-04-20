@@ -2,7 +2,7 @@ import React from 'react'
 
 const Education = () => {
   return (
-    <section className="flex items-center pd-10 justify-center mt-10 text-white">
+    <section className="flex items-center pd-10 justify-center mt-20 text-white">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start lg:space-x-12 space-y-12 lg:space-y-0">
         {/* Title Section */}
         <div className="lg:w-1/4 lg:my-40 w-full flex justify-center lg:justify-center items-center">

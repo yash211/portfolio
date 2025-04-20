@@ -12,6 +12,7 @@ import {
     faNodeJs,
     faDocker,
     faPython,
+    faAws
 
 } from "@fortawesome/free-brands-svg-icons";
 import { faCheckCircle, faEnvelope, faCopy, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -45,14 +46,16 @@ const About = ({ scrollToContactMe }) => {
         }
     };
 
+
+
     const socialIcons = [
-        { icon: faGithub, url: "https://github.com/yash211", label: "GitHub", delay: "0s" },
-        { icon: faMapMarkerAlt, label: "Location", delay: "2s" },
-        { icon: faPython, label: "Python", delay: "3s" },
-        { icon: faJsSquare, label: "JavaScript", delay: "4s" },
-        { icon: faEnvelope, label: "Email", email: email, delay: "1s" },
-        { icon: faLinkedin, url: "https://www.linkedin.com/in/yash211/", label: "LinkedIn", delay: "6s" },
-        { icon: "/images/leetcode.png", url: "https://leetcode.com/u/yash_211/", label: "Leetcode", delay: "5s" },
+        { icon: faGithub, url: "https://github.com/yash211", label: "GitHub" },
+        { icon: faAws, label: "AWS" },
+        { icon: faPython, label: "Python" },
+        { icon: faJsSquare, label: "JavaScript" },
+        { icon: faEnvelope, label: "Email", email: email },
+        { icon: faLinkedin, url: "https://www.linkedin.com/in/yash211/", label: "LinkedIn" },
+        { icon: "/images/leetcode.png", url: "https://leetcode.com/u/yash_211/", label: "Leetcode" },
     ];
 
     const Icons = [
@@ -109,15 +112,15 @@ const About = ({ scrollToContactMe }) => {
     // );
 
     return (
-        <section className="flex items-center justify-center mt-10 pt-10 px-4 md:px-8">
+        <section className="flex items-center justify-center pt-10 px-4 md:px-8">
             <style>
                 {`
                     @keyframes moveInCircle {
-                        0% {
-                            transform: rotate(0deg);
+                        from {
+                            transform: rotate(0deg) translateX(60px) rotate(0deg);
                         }
-                        100% {
-                            transform: rotate(360deg);
+                        to {
+                            transform: rotate(360deg) translateX(60px) rotate(-360deg);
                         }
                     }
 
@@ -125,26 +128,33 @@ const About = ({ scrollToContactMe }) => {
                         position: relative;
                         width: 120px;
                         height: 120px;
-                        animation: moveInCircle 8s linear infinite;
-                    }
-
-                    .icon-container:hover {
-                        animation-play-state: paused;
                     }
 
                     .icon-wrapper {
                         position: absolute;
                         width: 40px;
                         height: 40px;
-                        transform-origin: center;
                         left: 50%;
                         top: 50%;
                         margin-left: -20px;
                         margin-top: -20px;
                     }
 
-                    .tooltip-wrapper {
-                        transform: rotate(0deg) !important;
+                    .icon-wrapper:nth-child(1) { animation: moveInCircle 8s linear infinite; }
+                    .icon-wrapper:nth-child(2) { animation: moveInCircle 8s linear infinite 1.14s; }
+                    .icon-wrapper:nth-child(3) { animation: moveInCircle 8s linear infinite 2.28s; }
+                    .icon-wrapper:nth-child(4) { animation: moveInCircle 8s linear infinite 3.42s; }
+                    .icon-wrapper:nth-child(5) { animation: moveInCircle 8s linear infinite 4.56s; }
+                    .icon-wrapper:nth-child(6) { animation: moveInCircle 8s linear infinite 5.70s; }
+                    .icon-wrapper:nth-child(7) { animation: moveInCircle 8s linear infinite 6.84s; }
+
+                    .icon-wrapper:hover {
+                        animation-play-state: paused;
+                    }
+
+                    .icon-content {
+                        width: 100%;
+                        height: 100%;
                     }
 
                     @media (max-width: 768px) {
@@ -163,7 +173,7 @@ const About = ({ scrollToContactMe }) => {
                             <img
                                 src="/images/profile_pic.jpg"
                                 alt="Yash Gupta"
-                                className="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover shadow-lg border-4 border-white"
+                                className=" md:w-56 md:h-56 object-cover shadow-lg border-4 border-white"
                             />
                         </div>
                     </div>
@@ -222,59 +232,45 @@ const About = ({ scrollToContactMe }) => {
                         } transition-all duration-500`}
                 >
                     {!isScrolled ? (
+                        
                         <div className="circlecontainer w-48 right-4 h-48 rounded-full bg-white/90 backdrop-blur-sm flex justify-center items-center relative shadow-lg">
                             <div className="icon-container">
-                                {socialIcons.map((social, index) => {
-                                    const angle = (index * (2 * Math.PI)) / socialIcons.length;
-                                    const radius = 60;
-                                    const x = Math.cos(angle) * radius;
-                                    const y = Math.sin(angle) * radius;
-
-                                    return (
-                                        <div
-                                            key={index}
-                                            className="icon-wrapper"
-                                            style={{
-                                                transform: `translate(${x}px, ${y}px)`,
-                                            }}
-                                        >
-                                            <div
-                                                className="relative"
+                                {socialIcons.map((social, index) => (
+                                    <div key={index} className="icon-wrapper">
+                                        <div className="icon-content">
+                                            <a
+                                                href={social.url}
+                                                onClick={social.email ? (e) => e.preventDefault() : undefined}
+                                                aria-label={social.label}
+                                                className="w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-md hover:scale-110 transition-transform"
                                                 onMouseEnter={() => social.email && setShowEmailTooltip(true)}
                                                 onMouseLeave={() => social.email && setShowEmailTooltip(false)}
                                             >
-                                                <a
-                                                    href={social.url}
-                                                    onClick={social.email ? (e) => e.preventDefault() : undefined}
-                                                    aria-label={social.label}
-                                                    className="w-10 h-10 bg-white rounded-full flex justify-center items-center shadow-md hover:scale-110 transition-transform"
-                                                >
-                                                    {social.label === "Leetcode" ? (
-                                                        <img
-                                                            src="/images/leetcode.png"
-                                                            alt="LeetCode"
-                                                            className="text-blue-600 text-lg hover:text-blue-700 transition-colors"
-                                                            style={{ width: '24px', height: '24px' }}
-                                                        />
-                                                    ) : (
-                                                        <FontAwesomeIcon
-                                                            icon={social.icon}
-                                                            className="text-blue-600 text-lg hover:text-blue-700 transition-colors"
-                                                        />
-                                                    )}
-                                                </a>
-                                                {/* {social.email && showEmailTooltip && (
-                                                    <div className="tooltip-wrapper absolute -top-16 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                                                        <EmailTooltip 
-                                                            email={social.email} 
-                                                            onCopy={handleCopyEmail}
-                                                        />
-                                                    </div>
-                                                )} */}
-                                            </div>
+                                                {social.label === "Leetcode" ? (
+                                                    <img
+                                                        src="/images/leetcode.png"
+                                                        alt="LeetCode"
+                                                        className="text-blue-600 text-lg hover:text-blue-700 transition-colors"
+                                                        style={{ width: '24px', height: '24px' }}
+                                                    />
+                                                ) : (
+                                                    <FontAwesomeIcon
+                                                        icon={social.icon}
+                                                        className="text-blue-600 text-lg hover:text-blue-700 transition-colors"
+                                                    />
+                                                )}
+                                            </a>
+                                            {social.email && showEmailTooltip && (
+                                                <div className="absolute -top-16 left-1/2 -translate-x-1/2 whitespace-nowrap z-20">
+                                                    <EmailTooltip 
+                                                        email={social.email} 
+                                                        onCopy={handleCopyEmail}
+                                                    />
+                                                </div>
+                                            )}
                                         </div>
-                                    );
-                                })}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ) : (
