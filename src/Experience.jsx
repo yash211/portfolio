@@ -67,6 +67,10 @@ const Experience = () => {
                 "Gained proficiency in supervised learning techniques, including regression methods, to analyze datasets and predict outcomes effectively.",
                 "Enhanced technical skills in Python programming, data manipulation, and visualization techniques, alongside tools like Jupyter Notebooks for interactive coding",
             ],
+            awards: [{
+                "name": "Completion Certificate",
+                "url": "/images/tsf.png"
+            }],
         },
         {
             title: "Web Development Intern",
@@ -81,6 +85,10 @@ const Experience = () => {
                 "Managed code versions using Git, enabling collaborative work with peers and showcasing the project on GitHub.",
 
             ],
+            awards: [{
+                "name": "Letter Of Recommendation",
+                "url": "/images/lor_web.png"
+            }],
         },
         {
             title: "Flutter Developer",
@@ -91,6 +99,10 @@ const Experience = () => {
                 "Wrote efficient and maintainable Dart code within the Flutter framework to develop features for a diagnostic billing application, enhancing functionality and user experience.",
                 "Conducted thorough testing of the application to identify and resolve bugs, ensuring a smooth user experience and high-quality performance."
             ],
+            awards: [{
+                "name": "Completion Certificate",
+                "url": "/images/cometa.png"
+            }],
         },
 
     ];
