@@ -12,7 +12,7 @@ const Experience = () => {
             title: "Software Development Engineer-I",
             company: "Cloudesign Solution PVT LTD",
             type: "Contract-Part Time",
-            duration: "August 2024 - Current",
+            duration: "September 2024 - April 2025",
             tasks: [
                 "Developed robust backend APIs for the invoicing and billing module of a logistics application, ensuring high performance and scalability.",
                 "Mentored new team members to enhance their expertise in NestJS and ReactJS",
@@ -94,7 +94,7 @@ const Experience = () => {
             title: "Flutter Developer",
             company: "Cometa Intellect LLP",
             type: "Internship",
-            duration: "June 2023 - August 2023",
+            duration: "October 2020 - November 2020",
             tasks: [
                 "Wrote efficient and maintainable Dart code within the Flutter framework to develop features for a diagnostic billing application, enhancing functionality and user experience.",
                 "Conducted thorough testing of the application to identify and resolve bugs, ensuring a smooth user experience and high-quality performance."

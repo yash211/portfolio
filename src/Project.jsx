@@ -14,6 +14,33 @@ const projects = [
     image: "/images/game.png"
   },
   {
+  title: 'Financial Data Analysis — DBMS Final Project',
+  description: 'An end-to-end financial analytics pipeline using Python, MySQL, and Tableau. The system automates financial data collection via yFinance API, stores it in a normalized MySQL database, and visualizes insights through Tableau dashboards.',
+  technologies: ['Python', 'MySQL', 'Tableau', 'yFinance', 'Pandas'],
+  link: 'https://github.com/yg-uwo/DBMS-Final-Project', 
+  image: '/images/dbms.png' 
+},
+{
+  title: 'Chrono Thinker',
+  description: 'A Unity 2D top-down action-puzzle game that challenges players to defeat enemies using physics-based punchbags under time constraints. Features include enemy AI, health systems, and minimalist pixel art aesthetics.',
+  technologies: ['Unity', 'C#', '2D Physics', 'Animator Controller', 'Raycasting'],
+  link: 'https://github.com/yg-uwo/chrono-thinker',
+  image: '/images/chrono.png' 
+},
+{
+  title: 'Surface Crack Detection',
+  description: 'A hybrid ML/DL system for identifying surface cracks in concrete using SVM, KNN, CNN, and Inception-based models. Achieved 99.70% accuracy using deep learning with real-world applicability.',
+  technologies: ['Python', 'Scikit-learn', 'Keras', 'TensorFlow', 'OpenCV', 'PCA', 'HOG'],
+  link: 'https://github.com/call-me-jot/surface-crack-detector',
+  image: 'images/surface.png' 
+},{
+  title: 'Rent Interest Classifier',
+  description: 'A machine learning pipeline for predicting renter interest levels (low, medium, high) using structured features and sentiment analysis of descriptions via RNN and DistilBERT. Achieved 95.31% accuracy using Random Forest with sentiment features.',
+  technologies: ['Python', 'Scikit-learn', 'TensorFlow', 'Keras', 'NLTK', 'Optuna', 'Pandas', 'DistilBERT'],
+  link: 'https://github.com/call-me-jot/ECE9063-DA-Final-Project',
+  image: 'images/rent.png' 
+},
+  {
     title: 'Automated Healthcare System',
     description: 'An AI-based chatbot system for healthcare automation to assist users.',
     technologies: ['Python', 'Flask', 'NLP',"RestAPI"],
@@ -27,6 +54,7 @@ const projects = [
     link: 'https://github.com/yash211/Celebrity-Management',
     image: '/images/celeb.jpg'
   },
+
   {
     title: 'Score Prediction',
     description: 'A project predicting student scores based on study hours using machine learning.',
